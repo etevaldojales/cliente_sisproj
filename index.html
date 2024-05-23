@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISPROJ</title>
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen"/>
+    <link rel="stylesheet" href="css/style.css" media="screen"/>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="screen"/>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="principal">
+            <span
+                style="font-size: 20px; font-weight: 700; color: #18518f; font-family: 'Open Sans Condensed', sans-serif; margin-left: 35%;">SISPROJ - Projeto Seleção</span>
+        </div>
+        <div class="cadastro" style="margin-top: 25px;;">
+            <form action="#" method="post" name="frmcad" id="frmcad">
+                <table class="table">
+                    <tr>
+                        <td>
+                            <label for="url">Link</label>
+                            <input type="text" class="form-control" name="url" id="url" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="conteuo">Custom Alias</label>
+                            <input name="custom_alias" id="custom_alias" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <button type="button" class="btn-primary" onclick="salvar()">Salvar</button>
+                            &nbsp;&nbsp;
+                            <button type="button" class="btn-primary" onclick="limpar()">Limpar Campos</button>
+                            &nbsp;&nbsp;
+                            <button type="button" class="btn-primary" onclick="renderizar(2)">Mais visitados</button>
+                            &nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="msg" style="text-align: center; color: #DC143C;"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div style="width: 100%; text-align: center; margin-top: 25px;"><img src="img/loading.gif" alt="" id="loader"></div>
+        <div id="conteudo" class="conteudo" style="margin-top: 25px;"></div>
+    </div>
+    <footer style="margin-top: 25px;;">
+        <div>
+        <p class="rodape">SISPROJ &copy; 2024</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/funcao.js"></script>
+</body>
+</html>
